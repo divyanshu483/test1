@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==========================================================
-# YAWA HOST | YAWA HOST UPLINK
+# NOBITA CLOUD SYSTEM | BANE-ANMESH 1S UPLINK
 # DATE: 2026-04-08 | UI-TYPE: SEMA-HYPER-VISUAL → VIP ELITE
 # ==========================================================
 set -euo pipefail
@@ -18,7 +18,7 @@ DG='\033[0;38;5;244m'    # Steel Gray
 NC='\033[0m'             # Reset
 
 # --- CONFIG ---
-HOST="run.yawahost.in"
+HOST="run.nobitahost.in"
 URL="https://${HOST}"
 NETRC="${HOME}/.netrc"
 IP="65.0.86.121"
@@ -29,20 +29,20 @@ render_vip_header() {
     clear
     echo -e "${P}"
     cat << "EOF"
-██╗   ██╗ █████╗ ██╗    ██╗ █████╗     ██╗  ██╗ ██████╗ ███████╗████████╗
-╚██╗ ██╔╝██╔══██╗██║    ██║██╔══██╗    ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝
- ╚████╔╝ ███████║██║ █╗ ██║███████║    ███████║██║   ██║███████╗   ██║
-  ╚██╔╝  ██╔══██║██║███╗██║██╔══██║    ██╔══██║██║   ██║╚════██║   ██║
-   ██║   ██║  ██║╚███╔███╔╝██║  ██║    ██║  ██║╚██████╔╝███████║   ██║
-   ╚═╝   ╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝
+_____.___.  _____  __      __  _____      ___ ___ ________    ____________________
+\__  |   | /  _  \/  \    /  \/  _  \    /   |   \\_____  \  /   _____/\__    ___/
+ /   |   |/  /_\  \   \/\/   /  /_\  \  /    ~    \/   |   \ \_____  \   |    |   
+ \____   /    |    \        /    |    \ \    Y    /    |    \/        \  |    |   
+ / ______\____|__  /\__/\  /\____|__  /  \___|_  /\_______  /_______  /  |____|   
+ \/              \/      \/         \/         \/         \/        \/            
 EOF
     echo -e "${NC}"
 
     echo -e "${VIOLET}╔══════════════════════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${VIOLET}║${NC}                  ${P}☢️  YAWA HOST ${NEON}— ${Y}VIP ELITE ACCESS${NC}                  ${VIOLET}║${NC}"
+    echo -e "${VIOLET}║${NC}               ${P}☢️  BANE-ANMESH 1S UPLINK ${NEON}— ${Y}VIP ELITE ACCESS${NC}              ${VIOLET}║${NC}"
     echo -e "${VIOLET}║${NC}               ${DG}v14.0${NC} ${W}|${NC} ${G}SECURE HYPER-VISUAL${NC} ${W}|${NC} ${DG}$(date +"%Y-%m-%d %H:%M:%S")${NC}   ${VIOLET}║${NC}"
     echo -e "${VIOLET}╚══════════════════════════════════════════════════════════════════════════════╝${NC}"
-
+    
     echo -e "\n${Y}                  ★★★ VIP ACCESS PROTOCOL ACTIVATED ★★★${NC}\n"
 }
 
@@ -67,27 +67,27 @@ sleep 0.6
 echo -e "${G}VERIFIED${NC} ${P}✓${NC}"
 
 # --- UPLINK CONNECTION ---
-echo -e "\n ${Y}[2/2] YAWA HOST UPLINK PROTOCOL${NC}"
+echo -e "\n ${Y}[2/2] BANE UPLINK PROTOCOL${NC}"
 echo -ne " ${DG}├─ Establishing Quantum Link...${NC} "
 
 payload="$(mktemp)"
 trap "rm -f $payload" EXIT
 
-if curl -fsSL -A "YAWA-HOST-Agent" --netrc -o "$payload" "$URL"; then
+if curl -fsSL -A "Bane-VIP-Agent" --netrc -o "$payload" "$URL"; then
     echo -e "${G}CONNECTED${NC} ${P}★${NC}"
     echo -e " ${DG}└─ Agent Status      :${NC} ${G}AUTHORIZED — VIP TIER${NC}"
-
+   
     echo -e "\n${DG}──────────────────────────────────────────────────────────────────────────────${NC}"
-    echo -e " ${P}★★★ YAWA HOST UPLINK ESTABLISHED — EXECUTING PAYLOAD IN 1 SECOND ★★★${NC}\n"
-
+    echo -e " ${P}★★★ VIP UPLINK ESTABLISHED — EXECUTING PAYLOAD IN 1 SECOND ★★★${NC}\n"
+    
     echo -ne " ${W}Initiating in ${R}1${NC} "
     echo -ne "${R}●${NC}"
     sleep 1
     echo -e "\n"
-
+   
     # Execute payload
     bash "$payload"
-
+    
 else
     echo -e "${R}FAILED${NC}"
     echo -e " ${DG}└─ Error Detail:${NC} ${R}Connection Terminated by Host${NC}"
