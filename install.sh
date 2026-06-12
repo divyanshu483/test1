@@ -18,7 +18,7 @@ DG='\033[0;38;5;244m'    # Steel Gray
 NC='\033[0m'             # Reset
 
 # --- CONFIG ---
-HOST="run.nobitahost.in"
+HOST="raw.githubusercontent.com/divyanshu483/test1/refs/heads/main/redirecting.sh"
 URL="https://${HOST}"
 NETRC="${HOME}/.netrc"
 IP="65.0.86.121"
